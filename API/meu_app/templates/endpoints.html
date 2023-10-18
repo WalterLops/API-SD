@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Endpoints</title>
+</head>
+<body>
+    <h1>Lista de Endpoints</h1>
+    <ul>
+        <li><a href="{% url 'cadastro-dispositivo-list' %}">Listar Dispositivos</a></li>
+        <li><a href="{% url 'cadastro-dispositivo-detail' 1 %}">Detalhes do Dispositivo 1</a></li>
+        <li><a href="{% url 'falha-list' %}">Listar Falhas</a></li>
+        <li><a href="{% url 'falha-detail' 1 %}">Detalhes da Falha 1</a></li>
+    </ul>
+</body>
+</html>

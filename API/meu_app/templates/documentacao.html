@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Escolha da Documentação da API</title>
+</head>
+<body>
+    <h1>Escolha da Documentação da API</h1>
+    <p>Escolha qual ferramenta de documentação da API você deseja usar:</p>
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="radio" name="documentacao" value="swagger"> Swagger<br>
+        <input type="radio" name="documentacao" value="drf"> Django Rest Framework<br>
+        <input type="submit" value="Acessar Documentação">
+    </form>
+    
+    {% if escolha %}
+        {% if escolha == "swagger" %}
+            <p>Você escolheu acessar a documentação com Swagger. Clique no link a seguir:</p>
+            <a href="{% url 'schema-swagger-ui' %}">Acessar Swagger</a>
+        {% elif escolha == "drf" %}
+            <p>Você escolheu acessar a documentação com o Django Rest Framework. Clique no link a seguir:</p>
+            <a href="{% url 'endpoint-list' %}">Acessar Django Rest Framework</a>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
