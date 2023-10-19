@@ -1,9 +1,6 @@
 # API-SD
 
-```markdown
-# Seu Projeto Django
-
-Este é um projeto Django incrível que faz coisas incríveis. Siga as instruções abaixo para configurar e executar o projeto em seu ambiente local.
+Siga as instruções abaixo para configurar e executar o projeto em seu ambiente local.
 
 ## Pré-requisitos
 
@@ -86,5 +83,4 @@ Quando terminar de trabalhar no projeto, você pode desativar o ambiente virtual
 
 ```bash
 deactivate
-```
 ```

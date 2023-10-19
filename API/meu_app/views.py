@@ -2,12 +2,10 @@ from rest_framework import generics
 from .models import CadastroDispositivo, Falha
 from django.shortcuts import render
 from .serializers import CadastroDispositivoSerializer, FalhaSerializer
-from rest_framework_simplejwt.views import TokenObtainPairView
-from rest_framework_simplejwt.views import TokenRefreshView
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from django.views.decorators.csrf import csrf_exempt
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from .models import CustomUser
-from rest_framework.permissions import IsAuthenticated
 from .serializers import UserSerializer
 
 class CreateUserView(generics.CreateAPIView):
