@@ -7,6 +7,7 @@ from rest_framework_simplejwt.views import TokenRefreshView
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.permissions import AllowAny
 from .models import CustomUser
+from rest_framework.permissions import IsAuthenticated
 from .serializers import UserSerializer
 
 class CreateUserView(generics.CreateAPIView):
@@ -55,15 +56,19 @@ def escolher_documentacao(request):
 class CadastroDispositivoList(generics.ListCreateAPIView):
     queryset = CadastroDispositivo.objects.all()
     serializer_class = CadastroDispositivoSerializer
+    #permission_classes = [IsAuthenticated]
 
 class CadastroDispositivoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = CadastroDispositivo.objects.all()
     serializer_class = CadastroDispositivoSerializer
+    #permission_classes = [IsAuthenticated]
 
 class FalhaList(generics.ListCreateAPIView):
     queryset = Falha.objects.all()
     serializer_class = FalhaSerializer
+    #permission_classes = [IsAuthenticated]
 
 class FalhaDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Falha.objects.all()
     serializer_class = FalhaSerializer
+    #permission_classes = [IsAuthenticated]
